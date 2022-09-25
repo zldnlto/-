@@ -1,0 +1,29 @@
+:root {
+  --color-main-purple: #eae8fe;
+  --color-point-purple: #6327fe;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.ir {
+  position: absolute;
+  clip-path: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+/* resets */
+
+body,
+h1,
+h2 {
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}

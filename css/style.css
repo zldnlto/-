@@ -1,0 +1,51 @@
+@import url(./common.css);
+
+body {
+  background-color: var(--color-main-purple);
+}
+
+.body__wrapper {
+  max-width: 748px;
+  margin: 0 auto;
+}
+/* header */
+#header {
+  margin: 0 auto;
+  text-align: center;
+}
+
+#header .img-main-logo {
+  width: 386px;
+  height: 180px;
+}
+
+/* MAIN */
+#main {
+  display: grid;
+  grid-template-rows: 50px 495px;
+  /* 반응형 대비 높이 수정 필요*/
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "md-list wallet"
+    "md-list inventory";
+  column-gap: 28px;
+  margin: 82.88px auto 171px auto;
+}
+
+/* sec1 : md-list */
+#md-list {
+  grid-area: md-list;
+  background-color: yellowgreen;
+}
+
+/* article : wallet */
+#wallet {
+  grid-area: wallet;
+  background-color: rosybrown;
+}
+/* sect2 : inventory */
+#inventory {
+  grid-area: inventory;
+  background-color: royalblue;
+  margin-top: 20px;
+}
