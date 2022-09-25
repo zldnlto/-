@@ -21,12 +21,126 @@
       <main id="main">
         <!-- /*flex */ /* 상품 목록 */ -->
         <section id="md-list">
-          <h2>상품 목록</h2>
+          <h2 class="ir">상품 목록 및 계산하기</h2>
+          <section>
+            <h3 class="ir">상품 목록</h3>
+            <ul class="md-items">
+              <li class="md-item">
+                <button class="btn">
+                  <img
+                    src="./assets/Original_Cola.png"
+                    alt="Original_Cola"
+                    class="md-img"
+                  />
+                  <span class="md-name">Original_Cola</span>
+                  <span class="md-price">1000원</span>
+                </button>
+              </li>
+              <li class="md-item">
+                <button class="btn">
+                  <img
+                    src="./assets/Violet_Cola.png"
+                    alt="Violet_Cola"
+                    class="md-img"
+                  />
+                  <span class="md-name">Violet_Cola</span>
+                  <span class="md-price">1000원</span>
+                </button>
+              </li>
+              <li class="md-item">
+                <button class="btn">
+                  <img
+                    src="./assets/Yellow_Cola.png"
+                    alt="Yellow_Cola"
+                    class="md-img"
+                  />
+                  <span class="md-name">Yellow_Cola</span>
+                  <span class="md-price">1000원</span>
+                </button>
+              </li>
+              <li class="md-item">
+                <button class="btn">
+                  <img
+                    src="./assets/Cool_Cola.png"
+                    alt="Cool_Cola"
+                    class="md-img"
+                  />
+                  <span class="md-name">Cool_Cola</span>
+                  <span class="md-price">1000원</span>
+                </button>
+              </li>
+              <li class="md-item">
+                <button class="btn">
+                  <img
+                    src="./assets/Green_Cola.png"
+                    alt="Green_Cola"
+                    class="md-img"
+                  />
+                  <span class="md-name">Green_Cola</span>
+                  <span class="md-price">1000원</span>
+                </button>
+              </li>
+              <li class="md-item">
+                <button class="btn">
+                  <img
+                    src="./assets/Orange_Cola.png"
+                    alt="Orange_Cola"
+                    class="md-img"
+                  />
+                  <span class="md-name">Orange_Cola</span>
+                  <span class="md-price">1000원</span>
+                </button>
+              </li>
+            </ul>
+          </section>
+          <section class="sub-menu__container">
+            <h3 class="ir">잔액 및 장바구니</h3>
+            <div class="box-charge">
+              <div class="plain-box charge">잔액: <span>10000</span></div>
+              <button class="btn btn-charge">거스름돈 반환</button>
+            </div>
+            <form id="form-deposit">
+              <input
+                class="input"
+                required
+                type="text"
+                placeholder="입금액 입력"
+              />
+              <button class="btn btn-deposit">입금</button>
+            </form>
+            <div class="box-cart">
+              <div class="my-cart-scrollbox">
+                <ul class="my-cart">
+                  <li class="my-cart-item">
+                    <figure>
+                      <img
+                        src="./assets/Original_Cola.png"
+                        alt="Original_Cola"
+                      />
+                      <figcaption>Original_Cola</figcaption>
+                    </figure>
+                    <div class="count">1</div>
+                  </li>
+                  <li class="my-cart-item">
+                    <figure>
+                      <img src="./assets/Green_Cola.png" alt="Green_Cola" />
+                      <figcaption>Green_Cola</figcaption>
+                    </figure>
+                    <div class="count">2</div>
+                  </li>
+                </ul>
+              </div>
+              <button class="btn btn-get">획득</button>
+            </div>
+          </section>
         </section>
         <!-- /* 소지금 */ -->
         <article id="wallet">
-          <h2>소지금</h2>
-          <span class="cash"></span>
+          <h2 class="ir">소지금</h2>
+          <div class="plain-box wallet__box">
+            <span>소지금</span>
+            <span class="cash">25,000</span>
+          </div>
         </article>
         <!-- /* 얻은 음료들 */ -->
         <section id="inventory">

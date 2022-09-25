@@ -2,6 +2,7 @@
 
 body {
   background-color: var(--color-main-purple);
+  font-size: 14px;
 }
 
 .body__wrapper {
@@ -23,7 +24,6 @@ body {
 #main {
   display: grid;
   grid-template-rows: 50px 495px;
-  /* 반응형 대비 높이 수정 필요*/
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas:
     "md-list wallet"
@@ -35,14 +35,222 @@ body {
 /* sec1 : md-list */
 #md-list {
   grid-area: md-list;
-  background-color: yellowgreen;
+  background-color: #fff;
+  padding: 0px 27px 28px;
+}
+
+.md-items {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 31px;
+  grid-gap: 12px;
+}
+
+.md-item {
+  text-align: center;
+  width: 94px;
+  height: 130px;
+}
+
+.md-item .btn {
+  padding: 11.07px 0 9px 0;
+  width: 100%;
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5));
+  border-radius: 10px;
+}
+
+.md-img {
+  vertical-align: top;
+  text-align: center;
+
+  width: 35.86px;
+  height: 64.86px;
+}
+
+.md-name {
+  display: block;
+  margin-top: 6px;
+  font-size: 9px;
+}
+
+.md-price {
+  display: inline-block;
+  padding: 5px 16px 5px 15px;
+  margin-top: 7px;
+  border-radius: 50px;
+  background-color: var(--color-point-purple);
+  font-size: 12px;
+  line-height: 1;
+  color: #fff;
+}
+
+/* .md-item:not(:nth-child(3n + 1)) {
+  margin-left: 12px;
+} */
+
+.sub-menu__container {
+  margin-top: 20px;
+}
+
+.box-charge {
+  display: flex;
+  gap: 12px;
+}
+
+.charge {
+  position: relative;
+  flex-basis: 200px;
+  padding: 6px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.charge span {
+  position: absolute;
+  right: 10px;
+}
+
+.charge span::after {
+  content: "원";
+}
+
+.btn-charge {
+  flex-basis: 94px;
+  flex-shrink: 0;
+}
+
+#form-deposit {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+#form-deposit .input {
+  /* flex-basis 안먹는 이유?*/
+  width: 200px;
+  padding: 6px;
+  text-align: left;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+  outline: none;
+}
+
+#form-deposit .btn-deposit {
+  flex-basis: 94px;
+  flex-shrink: 0;
+}
+
+.box-cart {
+  margin-top: 12px;
+  display: flex;
+  gap: 12px;
+  height: 106px;
+}
+
+.my-cart-scrollbox {
+  flex-basis: 200px;
+  flex-shrink: 0;
+  height: 106px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+  background-color: var(--color-main-purple);
+}
+
+.my-cart-scrollbox::-webkit-scrollbar {
+  width: 12px;
+}
+.my-cart-scrollbox::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 4px solid transparent;
+}
+.my-cart-scrollbox::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+.my-cart {
+  width: 200px;
+  padding-top: 18px;
+  padding-left: 12px;
+  border-radius: 5px;
+}
+
+.my-cart-item {
+  position: relative;
+  background-color: #fff;
+  display: flex;
+  text-align: center;
+  width: 170px;
+  height: 46px;
+  border-radius: 5px;
+}
+.my-cart-item + .my-cart-item {
+  margin-top: 6px;
+}
+
+.my-cart-item img {
+  width: 18px;
+  height: 33px;
+  margin: 6px 10px 7px;
+}
+
+.my-cart-item figure {
+  position: relative;
+}
+
+.my-cart-item figcaption {
+  position: absolute;
+  font-size: 9px;
+  top: 18px;
+}
+
+.my-cart-item .count {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: 30px;
+  height: 30px;
+  padding-top: 0.5em;
+  font-size: 14px;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.btn-get {
+  flex-basis: 94px;
+  flex-shrink: 0;
+  background-color: var(--color-point-purple);
+  color: #fff;
 }
 
 /* article : wallet */
 #wallet {
   grid-area: wallet;
-  background-color: rosybrown;
+  background-color: #fff;
+  padding: 9px 27px;
 }
+
+#wallet .cash {
+  float: right;
+}
+
+#wallet .cash::after {
+  content: "원";
+  clear: both;
+}
+
+.wallet__box {
+  max-width: 306px;
+  height: 32px;
+  margin: 0 auto;
+  padding: 6px 10px;
+}
+
 /* sect2 : inventory */
 #inventory {
   grid-area: inventory;
