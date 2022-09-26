@@ -50,12 +50,19 @@ body {
   text-align: center;
   width: 94px;
   height: 130px;
+  border-radius: 10px;
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5));
+}
+
+.md-item .btn:hover {
+  border: 3px solid var(--color-point-purple);
+  margin: -3px;
+  filter: none;
 }
 
 .md-item .btn {
   padding: 11.07px 0 9px 0;
   width: 100%;
-  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5));
   border-radius: 10px;
 }
 
@@ -264,4 +271,25 @@ body {
   margin-top: 13px;
   width: 306px;
   height: 364px;
+}
+
+/* status */
+
+.soldout {
+  position: relative;
+}
+
+.soldout::after {
+  content: "품절";
+  color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  background-image: url("/assets/Sold-out.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
