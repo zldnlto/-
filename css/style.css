@@ -147,39 +147,41 @@ body {
   height: 106px;
 }
 
-.my-cart-scrollbox {
+.my-cart {
   flex-basis: 200px;
   flex-shrink: 0;
   height: 106px;
+
+  border-radius: 5px;
+}
+
+.items {
   overflow-x: hidden;
   overflow-y: auto;
-  border: 1px solid #bdbdbd;
   border-radius: 5px;
+  padding-top: 12px;
+  padding-left: 12px;
+  border: 1px solid #bdbdbd;
   background-color: var(--color-main-purple);
 }
 
-.my-cart-scrollbox::-webkit-scrollbar {
+.items::-webkit-scrollbar {
   width: 12px;
 }
-.my-cart-scrollbox::-webkit-scrollbar-thumb {
+.items::-webkit-scrollbar-thumb {
   background-color: #fff;
   border-radius: 10px;
   background-clip: padding-box;
   border: 4px solid transparent;
 }
-.my-cart-scrollbox::-webkit-scrollbar-track {
+.items::-webkit-scrollbar-track {
   background-color: transparent;
   border-radius: 10px;
 }
 
-.my-cart {
-  width: 200px;
-  padding-top: 18px;
-  padding-left: 12px;
-  border-radius: 5px;
-}
+/* cart와 inventory의 공통 컴포넌트 - item  */
 
-.my-cart-item {
+.item {
   position: relative;
   background-color: #fff;
   display: flex;
@@ -188,27 +190,17 @@ body {
   height: 46px;
   border-radius: 5px;
 }
-.my-cart-item + .my-cart-item {
+.item + .item {
   margin-top: 6px;
 }
 
-.my-cart-item img {
+.item img {
   width: 18px;
   height: 33px;
   margin: 6px 10px 7px;
 }
 
-.my-cart-item figure {
-  position: relative;
-}
-
-.my-cart-item figcaption {
-  position: absolute;
-  font-size: 9px;
-  top: 18px;
-}
-
-.my-cart-item .count {
+.count {
   position: absolute;
   right: 8px;
   top: 8px;
@@ -229,6 +221,7 @@ body {
 }
 
 /* article : wallet */
+
 #wallet {
   grid-area: wallet;
   background-color: #fff;
@@ -248,12 +241,27 @@ body {
   max-width: 306px;
   height: 32px;
   margin: 0 auto;
-  padding: 6px 10px;
 }
 
 /* sect2 : inventory */
 #inventory {
   grid-area: inventory;
-  background-color: royalblue;
+  background-color: #fff;
   margin-top: 20px;
+  padding: 25px 27px 26px;
+}
+
+#inventory h2 {
+  text-align: center;
+  font-weight: 700;
+}
+
+#inventory .item {
+  width: 276px;
+}
+
+#inventory .items {
+  margin-top: 13px;
+  width: 306px;
+  height: 364px;
 }
