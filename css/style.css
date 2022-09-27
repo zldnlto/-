@@ -9,7 +9,8 @@ body {
   max-width: 748px;
   margin: 0 auto;
 }
-/* header */
+
+/* HEADER */
 #header {
   margin: 0 auto;
   text-align: center;
@@ -55,23 +56,22 @@ body {
 }
 
 .md-item .btn:hover {
-  border: 3px solid var(--color-point-purple);
   margin: -3px;
+  border: 3px solid var(--color-point-purple);
   filter: none;
 }
 
 .md-item .btn {
-  padding: 11.07px 0 9px 0;
   width: 100%;
+  padding: 11.07px 0 9px 0;
   border-radius: 10px;
 }
 
 .md-img {
-  vertical-align: top;
-  text-align: center;
-
   width: 35.86px;
   height: 64.86px;
+  vertical-align: top;
+  text-align: center;
 }
 
 .md-name {
@@ -84,16 +84,12 @@ body {
   display: inline-block;
   padding: 5px 16px 5px 15px;
   margin-top: 7px;
-  border-radius: 50px;
   background-color: var(--color-point-purple);
+  border-radius: 50px;
   font-size: 12px;
   line-height: 1;
   color: #fff;
 }
-
-/* .md-item:not(:nth-child(3n + 1)) {
-  margin-left: 12px;
-} */
 
 .sub-menu__container {
   margin-top: 20px;
@@ -108,8 +104,6 @@ body {
   position: relative;
   flex-basis: 200px;
   padding: 6px 10px;
-  text-align: left;
-  vertical-align: top;
 }
 
 .charge span {
@@ -134,7 +128,7 @@ body {
 
 #form-deposit .input {
   /* flex-basis 안먹는 이유?*/
-  width: 200px;
+  flex-basis: 200px;
   padding: 6px;
   text-align: left;
   border: 1px solid #bdbdbd;
@@ -148,76 +142,17 @@ body {
 }
 
 .box-cart {
-  margin-top: 12px;
   display: flex;
-  gap: 12px;
   height: 106px;
+  margin-top: 12px;
+  gap: 12px;
 }
 
 .my-cart {
   flex-basis: 200px;
   flex-shrink: 0;
   height: 106px;
-
   border-radius: 5px;
-}
-
-.items {
-  overflow-x: hidden;
-  overflow-y: auto;
-  border-radius: 5px;
-  padding-top: 12px;
-  padding-left: 12px;
-  border: 1px solid #bdbdbd;
-  background-color: var(--color-main-purple);
-}
-
-.items::-webkit-scrollbar {
-  width: 12px;
-}
-.items::-webkit-scrollbar-thumb {
-  background-color: #fff;
-  border-radius: 10px;
-  background-clip: padding-box;
-  border: 4px solid transparent;
-}
-.items::-webkit-scrollbar-track {
-  background-color: transparent;
-  border-radius: 10px;
-}
-
-/* cart와 inventory의 공통 컴포넌트 - item  */
-
-.item {
-  position: relative;
-  background-color: #fff;
-  display: flex;
-  text-align: center;
-  width: 170px;
-  height: 46px;
-  border-radius: 5px;
-}
-.item + .item {
-  margin-top: 6px;
-}
-
-.item img {
-  width: 18px;
-  height: 33px;
-  margin: 6px 10px 7px;
-}
-
-.count {
-  position: absolute;
-  right: 8px;
-  top: 8px;
-  width: 30px;
-  height: 30px;
-  padding-top: 0.5em;
-  font-size: 14px;
-  border: 1px solid #bdbdbd;
-  border-radius: 5px;
-  text-align: center;
 }
 
 .btn-get {
@@ -264,13 +199,13 @@ body {
 }
 
 #inventory .item {
-  width: 276px;
+  max-width: 276px;
 }
 
 #inventory .items {
-  margin-top: 13px;
   width: 306px;
   height: 364px;
+  margin-top: 13px;
 }
 
 /* status */
@@ -281,15 +216,15 @@ body {
 
 .soldout::after {
   content: "품절";
-  color: transparent;
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-  border-radius: 10px;
   background: rgba(0, 0, 0, 0.8);
   background-image: url("/assets/Sold-out.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  border-radius: 10px;
+  color: transparent;
 }
