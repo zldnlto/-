@@ -228,3 +228,16 @@ body {
   border-radius: 10px;
   color: transparent;
 }
+
+/* Media query */
+
+@media screen and (max-width: 763px) {
+  #main {
+    display: block;
+    width: 360px;
+  }
+
+  #inventory {
+    margin-top: 0;
+  }
+}

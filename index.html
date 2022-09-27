@@ -104,6 +104,7 @@
                 required
                 type="text"
                 placeholder="입금액 입력"
+                onKeyup="this.value=this.value.replace(/[^-0-9]/g,'');"
               />
               <button class="btn btn-deposit">입금</button>
             </form>
